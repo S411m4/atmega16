@@ -32,4 +32,8 @@ void UART_init(long USART_BAUDRATE)
 	UCSRB |= (1 << RXEN) | (1 << TXEN);  //turn on transmit and receive
 	UCSRC |= (1 << UCSZ0) | (1 << UCSZ1) | (1 << URSEL);  //use 8-bit character size
 	
+	//UCSRB |= (1 << TXCIE);   //enable transmit interrupt
+	
+	//sei(); //enable global interrupts
+	
 }
